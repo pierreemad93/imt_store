@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/off-sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/scripts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/includes/topnav.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/pages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/product.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +66,12 @@
       <workItem from="1594715630042" duration="1210000" />
       <workItem from="1594717815111" duration="1792000" />
       <workItem from="1594719628528" duration="1791000" />
+      <workItem from="1594721530679" duration="1791000" />
+      <workItem from="1594723340952" duration="1792000" />
+      <workItem from="1594725148523" duration="1830000" />
+      <workItem from="1594726994795" duration="1529000" />
+      <workItem from="1594737215604" duration="1901000" />
+      <workItem from="1594739190474" duration="768000" />
     </task>
     <servers />
   </component>
