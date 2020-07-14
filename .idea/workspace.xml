@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="" />
+    <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/off-sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/scripts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/includes/topnav.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +73,9 @@
       <workItem from="1594545065594" duration="1684000" />
       <workItem from="1594547023849" duration="1536000" />
       <workItem from="1594548837735" duration="2022000" />
+      <workItem from="1594715630042" duration="1210000" />
+      <workItem from="1594717815111" duration="1792000" />
+      <workItem from="1594719628528" duration="1791000" />
     </task>
     <servers />
   </component>
