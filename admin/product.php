@@ -421,7 +421,7 @@ if ($do == 'manage') {
                     <?php
                     $stmt = $con->prepare("SELECT * FROM products");
                     $stmt->execute();
-                    $rows = $stmt->fetchAll();
+                    $row = $stmt->fetch();
                     ?>
                     <!-- end: DASHBOARD TITLE -->
                     <div class="container-fluid container-fullw bg-white">
@@ -441,7 +441,6 @@ if ($do == 'manage') {
                                                 <div class="col-sm-5 col-md-4">
                                                     <div class="user-left">
                                                         <div class="center">
-                                                            <h4>Peter Clark</h4>
                                                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                                                 <div class="user-image">
                                                                     <div class="fileinput-new thumbnail"><img src="assets/images/avatar-1-xl.jpg" alt="">
@@ -463,24 +462,18 @@ if ($do == 'manage') {
                                                 <div class="col-sm-7 col-md-8">
                                                     <div class="panel panel-white" id="activities">
                                                         <div class="panel-heading border-light">
-                                                            <h4 class="panel-title text-primary">Recent Activities</h4>
+                                                            <h4 class="panel-title text-primary">Product Information</h4>
                                                             <paneltool class="panel-tools" tool-collapse="tool-collapse" tool-refresh="load1" tool-dismiss="tool-dismiss"></paneltool>
                                                         </div>
                                                         <div collapse="activities" ng-init="activities=false" class="panel-wrapper">
                                                             <div class="panel-body">
                                                                 <table class="table table-condensed">
-                                                                    <thead>
-                                                                    <tr>
-                                                                        <th colspan="3">Contact Information</th>
-                                                                    </tr>
-                                                                    </thead>
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td>url</td>
+                                                                        <td>Product Name</td>
                                                                         <td>
-                                                                            <a href="#">
-                                                                                www.example.com
-                                                                            </a></td>
+                                                                            <a href="#"><?php echo $row['']?></a>
+                                                                        </td>
                                                                         <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
                                                                     <tr>
