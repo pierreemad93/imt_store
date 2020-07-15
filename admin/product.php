@@ -1,11 +1,12 @@
 <?php
 $do = isset($_GET['do']) ? $_GET['do'] : 'manage';
+include "connect.php";
+session_start();
+include "includes/functions.php";
 //if the page is main page
 if ($do == 'manage') {
     ?>
     <?php
-    session_start();
-    include "connect.php";
     include "includes/header.php";
     ?>
     <div id="app">
@@ -28,6 +29,11 @@ if ($do == 'manage') {
                             </div>
                         </div>
                     </section>
+                    <?php
+                    $stmt = $con->prepare("SELECT * FROM products");
+                    $stmt->execute();
+                    $rows = $stmt->fetchAll();
+                    ?>
                     <!-- start: STRIPED ROWS -->
                     <div class="container-fluid container-fullw">
                         <div class="row">
@@ -36,62 +42,28 @@ if ($do == 'manage') {
                                     <thead>
                                     <tr>
                                         <th class="center">Photo</th>
-                                        <th>Full Name</th>
-                                        <th class="hidden-xs">Role</th>
-                                        <th class="hidden-xs">Email</th>
-                                        <th class="hidden-xs">Phone</th>
-                                        <th></th>
+                                        <th>Product name</th>
+                                        <th>Product Price</th>
+                                        <th>Offers</th>
+                                        <th class="center">controls</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td class="center"><img src="assets/images/avatar-1.jpg" class="img-rounded"
-                                                                alt="image"></td>
-                                        <td>Peter Clark</td>
-                                        <td class="hidden-xs">UI Designer</td>
-                                        <td class="hidden-xs">
-                                            <a href="#" rel="nofollow" target="_blank">
-                                                peter@example.com
-                                            </a></td>
-                                        <td class="hidden-xs">(641)-734-4763</td>
-                                        <td class="center">
-                                            <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                                <a href="#" class="btn btn-transparent btn-xs" tooltip-placement="top"
-                                                   tooltip="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="btn btn-transparent btn-xs tooltips"
-                                                   tooltip-placement="top" tooltip="Share"><i
-                                                            class="fa fa-share"></i></a>
-                                                <a href="#" class="btn btn-transparent btn-xs tooltips"
-                                                   tooltip-placement="top" tooltip="Remove"><i
-                                                            class="fa fa-times fa fa-white"></i></a>
-                                            </div>
-                                            <div class="visible-xs visible-sm hidden-md hidden-lg">
-                                                <div class="btn-group" dropdown="">
-                                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
-                                                            dropdown-toggle="">
-                                                        <i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu pull-right dropdown-light" role="menu">
-                                                        <li>
-                                                            <a href="#">
-                                                                Edit
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                Share
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                Remove
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    <?php foreach ($rows as $row) { ?>
+                                        <tr>
+                                            <td class="center"><img
+                                                        src="assets/images/products/<?php echo $row['path'] ?>"
+                                                        class="img-rounded" alt="image" style="height:15vh"></td>
+                                            <td><?php echo $row['productname'] ?></td>
+                                            <td><?php echo $row['productprice'] ?></td>
+                                            <td>no</td>
+                                            <td class="center">
+                                                <a class="btn btn-info" href="product.php?do=show&productid=<?php echo $row['productid']?>"><i class="fa fa-eye"></i></a>
+                                                <a class="btn btn-warning" href="product.php?do=edit&productid=<?php echo $row['productid'] ?>"><i class="fa fa-edit"></i></a>
+                                                <a class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -108,8 +80,7 @@ if ($do == 'manage') {
     <?php
 } elseif ($do == 'add') { ?>
     <?php
-    session_start();
-    include "connect.php";
+
     include "includes/header.php";
     ?>
     <div id="app">
@@ -176,7 +147,9 @@ if ($do == 'manage') {
                                                 </legend>
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <textarea class="ckeditor form-control" cols="10" rows="10" style="visibility: hidden; display: none;" name="productdesc"></textarea>
+                                                        <textarea class="ckeditor form-control" cols="10" rows="10"
+                                                                  style="visibility: hidden; display: none;"
+                                                                  name="productdesc"></textarea>
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -195,12 +168,12 @@ if ($do == 'manage') {
     </div>
     <script src="vendor/ckeditor/ckeditor.js"></script>
     <script src="vendor/ckeditor/adapters/jquery.js"></script>
-  <script>
-         jQuery(document).ready(function() {
-          Main.init();
-          Index.init();
-      });
-  </script>
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+            Index.init();
+        });
+    </script>
     <?php include "includes/scripts.php" ?>
 
     <?php
@@ -208,7 +181,8 @@ if ($do == 'manage') {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $productName = $_POST['productname'];
         $productPrice = $_POST['productprice'];
-        $productDesc=$_POST['productdesc'];
+        $productDesc = $_POST['productdesc'];
+        $addedBy = $_SESSION['Username'];
         //start upload image
         $productImage = $_FILES['productimage']['name'];
         $productType = $_FILES['productimage']['type'];
@@ -229,12 +203,12 @@ if ($do == 'manage') {
             $formErrors[] = 'Product name must not be empty';
         }
 
-        if (is_numeric($productPrice)) {
-            $formErrors[] = 'Product price must be number';
-        }
-        if (strlen($productPrice)) {
-            $formErrors[] = 'Product price must be number';
-        }
+//        if (is_numeric($productPrice)) {
+//            $formErrors[] = 'Product price must be number';
+//        }
+//        if (strlen($productPrice)) {
+//            $formErrors[] = 'Product price must be number';
+//        }
 
         if (empty($productPrice)) {
             $formErrors[] = 'Product name must not be empty';
@@ -247,16 +221,15 @@ if ($do == 'manage') {
         }
         if (empty($formErrors)) {
             // check if userinfo in database
-            $check = checkItem("Username", "users", $user);
+            $check = checkItem("productname", "products", $productName);
             if ($check == 1) {
-                $theMsg = "<div class='alert alert-danger'>this user is exist</div>";
+                $theMsg = "<div class='alert alert-danger'>this product is exist</div>";
                 redirectHome($theMsg, 'back');
             } else {
-                $stmt = $con->prepare('INSERT INTO users (	productname ,productprice , description ,addedby,Date) VALUES ( ? , ? , ? , ?,now())');
-                $stmt->execute(array($productName, $productPrice, $productPath, $productDesc));
+                $stmt = $con->prepare('INSERT INTO products( productname ,productprice , path, percentage,description ,addedby,productdate) VALUES ( ? , ? ,? , null , ?, ?,now())');
+                $stmt->execute(array($productName, $productPrice, $productPath, $productDesc, $addedBy));
                 $count = $stmt->rowCount();
-                $theMsg = '<div class="alert alert-success">' . $count . 'Insert Record</div>';
-                redirectHome($theMsg, 'back');
+                header('Location:product.php?do=add');
             }
         }
 

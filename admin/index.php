@@ -1,19 +1,20 @@
+<?php session_start(); ?>
 <?php include "connect.php" ?>
 <?php include "includes/header.php" ?>
 <?php
-if ($_SERVER['REQUEST_METHOD']=='POST'){
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-    $hashedPass=sha1($password);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $hashedPass = sha1($password);
     //Check IF user exist at database
-    $stmt=$con->prepare('SELECT * FROM users WHERE username=? AND password=? AND groupid=1 LIMIT 1');
-    $stmt->execute(array($username,$hashedPass));
-    $row= $stmt->fetch();
-    $count=$stmt->rowCount();
+    $stmt = $con->prepare('SELECT * FROM users WHERE username=? AND password=? AND groupid=1 LIMIT 1');
+    $stmt->execute(array($username, $hashedPass));
+    $row = $stmt->fetch();
+    $count = $stmt->rowCount();
     //if count > 0 this mean the database contain information about this record
-    if ($count > 0){
-        $_SESSION['Username']=$username; // Register ssesion name
-        $_SESSION['ID']=$row['id'];  // Register session ID
+    if ($count == 1) {
+        $_SESSION['Username'] = $username; // Register ssesion name
+        $_SESSION['ID'] = $row['id'];  // Register session ID
         header('location:dashboard.php');//redirect to dashboard page
         exit();
     }
@@ -24,12 +25,12 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 <!-- start: LOGIN -->
 <div class="row">
     <div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-<!--        <div class="logo margin-top-30">-->
-<!--            <img src="assets/images/logo.png" alt="Clip-Two"/>-->
-<!--        </div>-->
+        <!--        <div class="logo margin-top-30">-->
+        <!--            <img src="assets/images/logo.png" alt="Clip-Two"/>-->
+        <!--        </div>-->
         <!-- start: LOGIN BOX -->
         <div class="box-login">
-            <form class="form-login" method="post" action="<?php $_SERVER['PHP_SELF']?>">
+            <form class="form-login" method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
                 <fieldset>
                     <legend>
                         Sign in to admin panel account

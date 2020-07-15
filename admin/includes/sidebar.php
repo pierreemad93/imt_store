@@ -50,12 +50,12 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="ui_elements.html">
+                            <a href="product.php">
                                 <span class="title"> All Products </span>
                             </a>
                         </li>
                         <li>
-                            <a href="ui_buttons.html">
+                            <a href="product.php?do=add">
                                 <span class="title"> Add Product </span>
                             </a>
                         </li>
