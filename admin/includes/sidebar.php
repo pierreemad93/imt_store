@@ -41,7 +41,7 @@
                     <a href="javascript:void(0)">
                         <div class="item-content">
                             <div class="item-media">
-                                <i class="ti-settings"></i>
+                                <i class="ti-tag"></i>
                             </div>
                             <div class="item-inner">
                                 <span class="title"> Products </span><i class="icon-arrow"></i>
@@ -63,6 +63,24 @@
                 </li>
             </ul>
             <!-- end: MAIN NAVIGATION MENU -->
+            <div class="navbar-title">
+                <span>Core Features</span>
+            </div>
+            <ul class="folders">
+                </li>
+                <li>
+                    <a href="../../index.php">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-home fa-stack-1x fa-inverse"></i> </span>
+                            </div>
+                            <div class="item-inner">
+                                <span class="title"> Visit Site </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </div>
 </div>

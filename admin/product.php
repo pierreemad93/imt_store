@@ -64,7 +64,7 @@ if ($do == 'manage') {
                                                 <a class="btn btn-warning"
                                                    href="product.php?do=edit&productid=<?php echo $row['productid'] ?>"><i
                                                             class="fa fa-edit"></i></a>
-                                                <a class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                                <a class="btn btn-danger" href="product.php?do=delete&productid=<?php echo $row['productid'] ?>"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -517,7 +517,17 @@ if ($do == 'manage') {
     <?php include "includes/scripts.php" ?>
     <?php
 } elseif ($do == 'delete') {
-    echo 'Welcome you are in ' . $do . ' category page';
+    $productid=isset($_GET['productid'])&& is_numeric($_GET['productid'])?intval($_GET['productid']):0;
+    $check=checkItem('productid' , 'products' , $productid);
+    if ($check > 0){
+        $stmt=$con->prepare('DELETE FROM products WHERE productid=?');
+        $stmt->execute(array($productid));
+        $theMsg="<div class='alert alert-success'>".$stmt->rowCount()."Record Deleted</div>";
+        header('Location:product.php');
+    }else{
+        $theMsg="<div class='alert alert-warning'>This ID is Not Exist</div>";
+        redirectHome($theMsg);
+    }
 }elseif ($do == 'excel') { ?>
     <?php
 
