@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/csv/import.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/csv/import.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/csv/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/csv/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/topnav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +104,8 @@
       <workItem from="1594899346454" duration="1794000" />
       <workItem from="1594901163228" duration="1789000" />
       <workItem from="1594902974045" duration="1648000" />
+      <workItem from="1594904965518" duration="1792000" />
+      <workItem from="1594906776621" duration="1532000" />
     </task>
     <servers />
   </component>

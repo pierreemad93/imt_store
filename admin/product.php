@@ -51,12 +51,16 @@ if ($do == 'manage') {
                                     <tbody>
                                     <?php foreach ($rows as $row) { ?>
                                         <tr>
-                                            <td class="center"><img
-                                                        src="assets/images/products/<?php echo $row['path'] ?>"
-                                                        class="img-rounded" alt="image" style="height:15vh"></td>
+                                            <td class="center"><img src="assets/images/products/<?php echo $row['path'] ?>" class="img-rounded" alt="image" style="height:15vh"></td>
                                             <td><?php echo $row['productname'] ?></td>
                                             <td><?php echo $row['productprice'] ?></td>
-                                            <td>no</td>
+                                            <td>
+                                                <?php if(empty($row['percentage'])){
+                                                    echo "<span class='label label-danger'>No offers</span>";
+                                                }else{
+                                                    echo "<span class='label label-success'>offers</span>";
+                                                }?>
+                                            </td>
                                             <td class="center">
                                                 <a class="btn btn-info"
                                                    href="product.php?do=show&productid=<?php echo $row['productid'] ?>"><i
@@ -130,6 +134,13 @@ if ($do == 'manage') {
                                                                 <input type="text" placeholder="Add product price"
                                                                        name="productprice" class="form-control">
                                                             </div>
+                                                            <label>
+                                                                sale<span class=""></span>
+                                                            </label>
+                                                            <div class="form-group">
+                                                                <input type="text" placeholder="sale"
+                                                                       name="productsale" class="form-control">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -187,6 +198,7 @@ if ($do == 'manage') {
         $productName = $_POST['productname'];
         $productPrice = $_POST['productprice'];
         $productDesc = $_POST['productdesc'];
+        $productSale= empty($_POST['productsale'])?null:$_POST['productsale'];
         $addedBy = $_SESSION['Username'];
         //start upload image
         $productImage = $_FILES['productimage']['name'];
@@ -231,8 +243,8 @@ if ($do == 'manage') {
                 $theMsg = "<div class='alert alert-danger'>this product is exist</div>";
                 redirectHome($theMsg, 'back');
             } else {
-                $stmt = $con->prepare('INSERT INTO products( productname ,productprice , path, percentage,description ,addedby,productdate) VALUES ( ? , ? ,? , null , ?, ?,now())');
-                $stmt->execute(array($productName, $productPrice, $productPath, $productDesc, $addedBy));
+                $stmt = $con->prepare('INSERT INTO products( productname ,productprice , path, percentage,description ,addedby,productdate) VALUES ( ? , ? ,? , ? , ?, ?,now())');
+                $stmt->execute(array($productName, $productPrice, $productPath, $productSale, $productDesc, $addedBy));
                 $count = $stmt->rowCount();
                 header('Location:product.php?do=add');
             }
@@ -300,6 +312,14 @@ if ($do == 'manage') {
                                                                            name="productprice" class="form-control"
                                                                            value="<?php echo $row['productprice'] ?>">
                                                                 </div>
+                                                                <label>
+                                                                    Sale<span></span>
+                                                                </label>
+                                                                <div class="form-group">
+                                                                    <input type="text" placeholder="Add product price"
+                                                                           name="productsale" class="form-control"
+                                                                           value="<?php echo $row['percentage'] ?>">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -308,9 +328,8 @@ if ($do == 'manage') {
                                                                     Image<span class="symbol required"></span>
                                                                 </label>
                                                                 <div class="form-group">
-                                                                    <input type="file" placeholder="Add product name"
-                                                                           name="productimage"
-                                                                           value="<?php echo $row['path'] ?>">
+                                                                    <input type="file" placeholder="Add product name" name="productimage"  value="<?php echo $row['path'] ?>">
+                                                                    <?php $_SESSION['PATH'] = $row['path']?>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -357,13 +376,15 @@ if ($do == 'manage') {
         $productName = $_POST['productname'];
         $productPrice = $_POST['productprice'];
         $productDesc = $_POST['productdesc'];
+        $productSale= empty($_POST['productsale'])?null:$_POST['productsale'];
         $addedBy = $_SESSION['Username'];
         //start upload image
         $productImage = $_FILES['productimage']['name'];
         $productType = $_FILES['productimage']['type'];
         $productTmp = $_FILES['productimage']['tmp_name'];
         $productsize = $_FILES['productimage']['size'];
-        $productPath = rand(0, 1000) . '_' . $productImage;
+        $productPath=rand(0, 1000) . '_' . $productImage;
+       // $productPath = rand(0, 1000) . '_' . $productImage;
         move_uploaded_file($productTmp, "assets\images\products\\" . $productPath);
         // list of allowed types to upload
         $imageAllowedExtension = array('jpeg', 'jpg', 'png');
@@ -395,8 +416,8 @@ if ($do == 'manage') {
             echo "<div class='alert alert-danger'>" . $error . "</div>";
         }
         if (empty($formErrors)) {
-            $stmt = $con->prepare('UPDATE  products SET  productname=? , productprice=? , path=? , description=? ,addedby=? WHERE productid=?');
-            $stmt->execute(array($productName, $productPrice, $productPath, $productDesc, $addedBy, $productid));
+            $stmt = $con->prepare('UPDATE  products SET  productname=? , productprice=? , path=? ,percentage=?, description=? ,addedby=? WHERE productid=?');
+            $stmt->execute(array($productName, $productPrice, $productPath, $productSale ,$productDesc, $addedBy, $productid));
             $count = $stmt->rowCount();
             header('Location:product.php');
         }
