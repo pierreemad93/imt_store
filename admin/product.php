@@ -444,16 +444,7 @@ if ($do == 'manage') {
                                                         <div class="center">
                                                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                                                 <div class="user-image">
-                                                                    <div class="fileinput-new thumbnail"><img src="assets/images/avatar-1-xl.jpg" alt="">
-                                                                    </div>
-                                                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
-                                                                    <div class="user-image-buttons">
-																			<span class="btn btn-azure btn-file btn-sm"><span class="fileinput-new"><i class="fa fa-pencil"></i></span><span class="fileinput-exists"><i class="fa fa-pencil"></i></span>
-																				<input type="file">
-																			</span>
-                                                                        <a href="#" class="btn fileinput-exists btn-red btn-sm" data-dismiss="fileinput">
-                                                                            <i class="fa fa-times"></i>
-                                                                        </a>
+                                                                    <div class="fileinput-new thumbnail"><img src="assets/images/products/<?php echo $row['path']?>" alt="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -478,11 +469,8 @@ if ($do == 'manage') {
                                                                         <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>email:</td>
-                                                                        <td>
-                                                                            <a href="">
-                                                                                peter@example.com
-                                                                            </a></td>
+                                                                        <td>Price</td>
+                                                                        <td><a href=""><?php echo  $row['productprice']?></a></td>
                                                                         <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
                                                                     <tr>
