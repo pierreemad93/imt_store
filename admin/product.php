@@ -420,8 +420,9 @@ if ($do == 'manage') {
                         </div>
                     </section>
                     <?php
-                    $stmt = $con->prepare("SELECT * FROM products");
-                    $stmt->execute();
+                    $productid=$_GET['productid'];
+                    $stmt = $con->prepare("SELECT * FROM products where productid=?");
+                    $stmt->execute(array($productid));
                     $row = $stmt->fetch();
                     ?>
                     <!-- end: DASHBOARD TITLE -->
@@ -466,25 +467,10 @@ if ($do == 'manage') {
                                                                         <td>
                                                                             <a href="#"><?php echo $row['productname']?></a>
                                                                         </td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>Price</td>
                                                                         <td><a href=""><?php echo  $row['productprice']?></a></td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>phone:</td>
-                                                                        <td>(641)-734-4763</td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>skye</td>
-                                                                        <td>
-                                                                            <a href="">
-                                                                                peterclark82
-                                                                            </a></td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -496,57 +482,25 @@ if ($do == 'manage') {
                                                                     </thead>
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td>Position</td>
-                                                                        <td>UI Designer</td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
+                                                                        <td>Product desctiption</td>
+                                                                        <td><?php echo $row['description']?></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>Last Logged In</td>
-                                                                        <td>56 min</td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Position</td>
-                                                                        <td>Senior Marketing Manager</td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Supervisor</td>
-                                                                        <td>
-                                                                            <a href="#">
-                                                                                Kenneth Ross
-                                                                            </a></td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Status</td>
+                                                                        <td>Added By</td>
                                                                         <td><span class="label label-sm label-info">Administrator</span></td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                                <table class="table">
-                                                                    <thead>
-                                                                    <tr>
-                                                                        <th colspan="3">Additional information</th>
-                                                                    </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td>Birth</td>
-                                                                        <td>21 October 1982</td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>Groups</td>
-                                                                        <td>New company web site development, HR Management</td>
-                                                                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
+                                                                        <td>Added at</td>
+                                                                        <td><span class=""><?php echo  $row['productdate']?></span></td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="container">
+                                                    <a href="product.php" class="btn btn-info "><i class="fa fa-arrow-left"></i> back</a>
                                                 </div>
                                             </div>
                                         </div>
