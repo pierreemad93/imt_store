@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/includes/csv/import.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/product.php" afterDir="false" />
     </list>
@@ -72,6 +73,21 @@
       <workItem from="1594726994795" duration="1529000" />
       <workItem from="1594737215604" duration="1901000" />
       <workItem from="1594739190474" duration="768000" />
+      <workItem from="1594806725227" duration="599000" />
+      <workItem from="1594815156154" duration="1197000" />
+      <workItem from="1594824640037" duration="1794000" />
+      <workItem from="1594826451414" duration="1792000" />
+      <workItem from="1594828261265" duration="1091000" />
+      <workItem from="1594831011268" duration="1792000" />
+      <workItem from="1594832821438" duration="1313000" />
+      <workItem from="1594834629403" duration="1812000" />
+      <workItem from="1594836690247" duration="1176000" />
+      <workItem from="1594887986030" duration="602000" />
+      <workItem from="1594890490743" duration="1793000" />
+      <workItem from="1594892330154" duration="1791000" />
+      <workItem from="1594894136901" duration="404000" />
+      <workItem from="1594895423131" duration="1621000" />
+      <workItem from="1594897231462" duration="1100000" />
     </task>
     <servers />
   </component>

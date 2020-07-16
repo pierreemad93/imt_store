@@ -24,8 +24,8 @@ if ($do == 'manage') {
                             <div class="col-sm-5 col-md-5">
                                 <a type="button" href="?do=add" class="btn btn-wide btn-primary"><i
                                             class="fa fa-plus-square"></i> add Product</a>
-                                <a type="button" class="btn btn-wide btn-success"><i class="fa fa-file-excel-o"></i>
-                                    Import CSV</a>
+                                <a type="button" class="btn btn-wide btn-success" href="?do=excel"><i class="fa fa-file-excel-o"></i>
+                                    Excel Sheet</a>
                             </div>
                         </div>
                     </section>
@@ -162,6 +162,7 @@ if ($do == 'manage') {
                                 </div>
                             </div>
                             <input type="submit" value="Add Product" class="btn btn-primary">
+                            <a  class="btn btn-danger" href="product.php">Back</a>
                         </form>
                     </div>
                     <!-- end: Added Form -->
@@ -472,7 +473,7 @@ if ($do == 'manage') {
                                                                     <tr>
                                                                         <td>Product Name</td>
                                                                         <td>
-                                                                            <a href="#"><?php echo $row['']?></a>
+                                                                            <a href="#"><?php echo $row['productname']?></a>
                                                                         </td>
                                                                         <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                                                     </tr>
@@ -575,7 +576,85 @@ if ($do == 'manage') {
     <?php
 } elseif ($do == 'delete') {
     echo 'Welcome you are in ' . $do . ' category page';
-} else {
+}elseif ($do == 'excel') { ?>
+    <?php
+
+    include "includes/header.php";
+    ?>
+    <div id="app">
+        <?php include "includes/sidebar.php" ?>
+        <div class="app-content">
+            <?php include "includes/topnav.php" ?>
+            <div class="main-content">
+                <div class="wrap-content container" id="container">
+                    <!-- start: DASHBOARD TITLE -->
+                    <section id="page-title" class="padding-top-15 padding-bottom-15">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <h1 class="mainTitle">Excel Sheets</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end: DASHBOARD TITLE -->
+                    <!-- start: Added Form -->
+                    <div class="container-fluid container-fullw bg-white">
+                        <form id="upload_csv" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <fieldset>
+                                                <legend>
+                                                    Import CSV
+                                                </legend>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>
+                                                                Import Sheet<span class="symbol required"></span>
+                                                            </label>
+                                                            <div class="form-group">
+                                                                <input type="file" placeholder="Add product name" name="importproduct" id="importproduct">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Upload Products" class="btn btn-primary">
+                        </form>
+                    </div>
+                    <!-- end: Added Form -->
+                </div>
+            </div>
+        </div>
+        <?php include "includes/footer.php" ?>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        $('document').ready(function () {
+            $('#upload_csv').on('submit',function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url:'includes/csv/import.php' ,
+                    method: 'POST' ,
+                    data :new FormData(this),
+                    contentType:false ,
+                    cache : false ,
+                    processData:false ,
+                    success:function (data) {
+                        //console.log(data);
+                    }
+                });
+            });
+        });
+    </script>
+    <?php include "includes/scripts.php" ?>
+<?php
+}else {
     echo 'Error';
 }
 ?>
