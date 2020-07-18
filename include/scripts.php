@@ -48,7 +48,7 @@
             var search =$('#live_search').val();
             $.ajax({
                 url:'ajax/search.php',
-                data : {search:livesearch} ,
+                data : {livesearch:search} ,
                 method : 'POST' ,
                 success : function (data) {
                     if (!data.error){
