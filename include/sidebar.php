@@ -1,5 +1,5 @@
 <aside class="sidebar">
-    <form action="" method="">
+    <form action="" method="post">
         <div class="input-group mb-3 pb-1">
             <input type="text" class="form-control text-1" placeholder="Search Product here" name="livesearch" id="live_search">
             <span class="input-group-append">
@@ -10,7 +10,6 @@
         </div>
     </form>
     <div id="result"></div>
-
     <h5 class="font-weight-bold pt-3">Categories</h5>
     <ul class="nav nav-list flex-column">
         <li class="nav-item"><a class="nav-link" href="#">Arduino</a></li>
@@ -19,7 +18,6 @@
         <li class="nav-item"><a class="nav-link" href="#">bluetooth Module</a></li>
         <li class="nav-item"><a class="nav-link" href="#">buck</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Dc Booster</a></li>
-
     </ul>
     <!--                        <h5 class="font-weight-bold pt-5">Tags</h5>-->
     <!--                        <div class="mb-3 pb-1">-->
