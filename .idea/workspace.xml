@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/navbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/scripts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/skins/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/skins/default.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,6 +43,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\imt_store" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -110,7 +115,11 @@
       <workItem from="1594902974045" duration="1648000" />
       <workItem from="1594904965518" duration="1792000" />
       <workItem from="1594906776621" duration="1532000" />
-      <workItem from="1594909537466" duration="702000" />
+      <workItem from="1594909537466" duration="1791000" />
+      <workItem from="1594911346220" duration="1218000" />
+      <workItem from="1595061516157" duration="1582000" />
+      <workItem from="1595064558385" duration="1791000" />
+      <workItem from="1595066438745" duration="1130000" />
     </task>
     <servers />
   </component>

@@ -2502,7 +2502,7 @@ html body .tabs .nav-tabs .nav-link:hover,
 html.dark body .tabs .nav-tabs .nav-link:hover,
 html body .tabs .nav-tabs li.active .nav-link,
 html.dark body .tabs .nav-tabs li.active .nav-link {
-	color: #0088CC;
+	color: var(--main-color);
 }
 
 html body .tabs .nav-tabs .nav-link:hover,
@@ -2515,7 +2515,7 @@ html body .tabs .nav-tabs.nav-justified .nav-link:hover,
 html.dark body .tabs .nav-tabs.nav-justified .nav-link:hover,
 html body .tabs .nav-tabs.nav-justified .nav-link:focus,
 html.dark body .tabs .nav-tabs.nav-justified .nav-link:focus {
-	border-top-color: #0088CC;
+	border-top-color: var(--main-color);
 }
 
 html body .tabs.tabs-bottom .nav-tabs li .nav-link:hover,
