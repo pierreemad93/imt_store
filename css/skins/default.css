@@ -2233,15 +2233,15 @@ html .page-header-color.page-header-light .breadcrumb > .active {
 }
 
 html .toggle-primary .toggle label {
-	color: #0088CC;
-	border-left-color: #0088CC;
-	border-right-color: #0088CC;
+	color: var(--main-color);
+	border-left-color: var(--main-color);
+	border-right-color: var(--main-color);
 }
 
 html .toggle-primary .toggle.active > label {
-	background-color: #0088CC;
-	border-color: #0088CC;
-	color: #FFF;
+	background-color: var(--main-color);
+	border-color: var(--main-color);
+	color: var(--sec-color);
 }
 
 html .toggle-primary.toggle-simple .toggle > label:after {
