@@ -638,47 +638,47 @@ html .overlay-color-light:not(.no-skin):before {
 }
 
 html .btn-primary {
-	background-color: #0088CC;
-	border-color: #0088CC #0088CC #006699;
+	background-color: var(--main-color);
+	border-color: var(--main-color);
 	color: #FFF;
 }
 
 html .btn-primary:hover,
 html .btn-primary.hover {
-	background-color: #00a1f2;
-	border-color: #00aaff #00aaff #0088CC;
+	background-color: var(--main-color);
+	border-color: var(--main-color);
 	color: #FFF;
 }
 
 html .btn-primary:focus,
 html .btn-primary.focus {
-	-webkit-box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.5);
-	box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.5);
+	-webkit-box-shadow:var(--main-color);
+	box-shadow:var(--main-color);
 }
 
 html .btn-primary.disabled,
 html .btn-primary:disabled {
-	background-color: #0088CC;
-	border-color: #0088CC #0088CC #006699;
+	background-color: var(--main-color);
+	border-color: var(--main-color);
 }
 
 html .btn-primary:active,
 html .btn-primary.active {
-	background-color: #006ea6 !important;
+	background-color: var(--main-color) !important;
 	background-image: none !important;
-	border-color: #006699 #006699 #004466 !important;
+	border-color: var(--main-color) !important;
 }
 
 html .btn-primary-scale-2 {
-	background-color: #006699;
-	border-color: #006699 #006699 #004466;
+	background-color: var(--main-color);
+	border-color: var(--main-color);
 	color: #FFF;
 }
 
 html .btn-primary-scale-2:hover,
 html .btn-primary-scale-2.hover {
-	background-color: #007fbf;
-	border-color: #0088cc #0088cc #006699;
+	background-color: var(--main-color);
+	border-color:var(--main-color);
 	color: #FFF;
 }
 
@@ -690,8 +690,8 @@ html .btn-primary-scale-2.focus {
 
 html .btn-primary-scale-2.disabled,
 html .btn-primary-scale-2:disabled {
-	background-color: #006699;
-	border-color: #006699 #006699 #004466;
+	background-color: var(--main-color);
+	border-color: var(--main-color);
 }
 
 html .btn-primary-scale-2:active,
