@@ -30,12 +30,11 @@ if (!empty($liveSearch)) {
                             <?php if (!empty($row['percentage'])) { ?>
                                 <del><span class="amount"><?php echo $row['productprice'] ?> EGP</span></del>
                                 <ins><span class="amount text-dark font-weight-semibold"><?php echo $row['percentage'] ?> EGP</span></ins>
-                                    <?php }
-                                    else {
-                                        ?>
-                             <ins><span class="amount text-dark font-weight-semibold"><?php echo $row["productprice"] ?> EGP</span></ins>
-                                   <?php
-                                    } ?>
+                            <?php } else {
+                                ?>
+                                <ins><span class="amount text-dark font-weight-semibold"><?php echo $row["productprice"] ?> EGP</span></ins>
+                                <?php
+                            } ?>
                         </span>
                     </a>
                 </span>
