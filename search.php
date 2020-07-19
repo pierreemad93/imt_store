@@ -10,16 +10,16 @@
                 </div>
                 <!--Start Content-->
                 <div class="col-lg-9">
-                    <!--Start Live search-->
                     <form action="" method="post">
                         <div class="input-group mb-3 pb-1">
-                            <input type="text" class="form-control text-1" placeholder="Search Product here" name="livesearch" id="live_search" autocomplete="off">
-                            <span class="input-group-append"></span>
+                            <input type="text" class="form-control text-1" placeholder="Search Product here"
+                                   name="livesearch" id="live_search" autocomplete="off">
                         </div>
                     </form>
-                    <!--End Live search-->
                     <div class="masonry-loader masonry-loader-showing">
-                         <div class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}"  id="result"></div>
+                        <div class="row products product-thumb-info-list" data-plugin-masonry
+                             data-plugin-options="{'layoutMode': 'fitRows'}" id="result">
+                        </div>
                     </div>
                 </div>
                 <!--End Content-->
