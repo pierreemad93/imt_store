@@ -14,18 +14,12 @@
                     <form action="" method="post">
                         <div class="input-group mb-3 pb-1">
                             <input type="text" class="form-control text-1" placeholder="Search Product here" name="livesearch" id="live_search" autocomplete="off">
-                            <span class="input-group-append">
-                                <button type="submit" class="btn btn-dark text-1 p-2">
-                                    <i class="fas fa-search m-2"></i>
-                                </button>
-                            </span>
+                            <span class="input-group-append"></span>
                         </div>
                     </form>
                     <!--End Live search-->
                     <div class="masonry-loader masonry-loader-showing">
-                        <div id="result" class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
-
-                        </div>
+                         <div class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}"  id="result"></div>
                     </div>
                 </div>
                 <!--End Content-->

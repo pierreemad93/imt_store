@@ -15,9 +15,9 @@ if (!empty($liveSearch)) {
                 <a><span class=""></span></a>
             <?php } ?>
             <span class="product-thumb-info border-0">
-<!--											<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">-->
-                <!--												<span class="text-uppercase text-1">Add to Cart</span>-->
-                <!--											</a>-->
+                <!--<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">-->
+                <!--<span class="text-uppercase text-1">Add to Cart</span>-->
+                <!--</a>-->
                 <a href="product.php?do=<?php echo $row['productid'] ?>">
                     <span class="product-thumb-info-image">
                         <img alt="" class="img-fluid" src="admin/assets/images/products/<?php echo $row['path'] ?>">

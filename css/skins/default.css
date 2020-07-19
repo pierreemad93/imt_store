@@ -184,7 +184,7 @@ html .bg-hover-light:hover {
 }
 
 html .border-color-primary {
-	border-color: #0088CC !important;
+	border-color: var(--main-color) !important;
 }
 
 html .border-color-hover-primary:hover {
