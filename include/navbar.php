@@ -422,13 +422,8 @@
                                                 </a>
                                             </li>
                                             <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="#">
-                                                    Terms and Conditions
-                                                </a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="#">
-                                                    Contact
+                                                <a class="dropdown-item dropdown-toggle" href="search.php">
+                                                    <i class="fa fa-search"></i>
                                                 </a>
                                             </li>
                                         </ul>

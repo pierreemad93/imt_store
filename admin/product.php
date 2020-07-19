@@ -619,7 +619,7 @@ if ($do == 'manage') {
                     cache : false ,
                     processData:false ,
                     success:function (data) {
-                        //console.log(data);
+                        console.log(data);
                     }
                 });
             });

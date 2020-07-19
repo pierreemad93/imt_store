@@ -1,4 +1,4 @@
-productid,productname,productprice
-2,pierre,500
-3,tomas,100
-4,YOUSRY,1000
+productid,productname,productprice, path,percentage,description
+2,pierre,500,test,100,test test test 
+3,thomas,500,test,100,test test test 
+4,yousry,1500,test,0, 

@@ -1,16 +1,16 @@
 <aside class="sidebar">
-    <form action="" method="post">
-        <div class="input-group mb-3 pb-1">
-            <input type="text" class="form-control text-1" placeholder="Search Product here" name="livesearch" id="live_search">
-            <span class="input-group-append">
-                <button type="submit" class="btn btn-dark text-1 p-2">
-                    <i class="fas fa-search m-2"></i>
-                </button>
-            </span>
-        </div>
-    </form>
-    <div id="result"></div>
-    <h5 class="font-weight-bold pt-3">Categories</h5>
+<!--    <form action="" method="post">-->
+<!--        <div class="input-group mb-3 pb-1">-->
+<!--            <input type="text" class="form-control text-1" placeholder="Search Product here" name="livesearch" id="live_search">-->
+<!--            <span class="input-group-append">-->
+<!--                <button type="submit" class="btn btn-dark text-1 p-2">-->
+<!--                    <i class="fas fa-search m-2"></i>-->
+<!--                </button>-->
+<!--            </span>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <div id="result"></div>-->
+    <h5 class="font-weight-bold">Categories</h5>
     <ul class="nav nav-list flex-column">
         <li class="nav-item"><a class="nav-link" href="#">Arduino</a></li>
         <li class="nav-item"><a class="nav-link" href="#">AVR</a></li>

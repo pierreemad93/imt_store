@@ -11,21 +11,12 @@ if (!empty($_FILES['importproduct']['name'])){
        while ($row = fgetcsv($fileData)){
            $productName = $row[1];
            $productPrice = $row[2] ;
-//           $productImage = $_FILES['productimage']['name'];
-//           $productType = $_FILES['productimage']['type'];
-//           $productTmp = $_FILES['productimage']['tmp_name'];
-//           $productsize = $_FILES['productimage']['size'];
-//           $productPath = rand(0, 1000) . '_' . $productImage;
-//           move_uploaded_file($productTmp, "assets\images\products\\" . $productPath);
-//           // list of allowed types to upload
-//           $imageAllowedExtension = array('jpeg', 'jpg', 'png');
-//           //get imageExtension
-//           $imageExtension = strtolower(end(explode('.', $productImage)));
-           //End upload image
            $productPath= 'test';
+           $precentage = $row[4] ;
+           $descreption =  $row[5] ;
            $addedBy = 'admin' ;
-           $stmt = $con->prepare('INSERT INTO products( productname ,productprice , path , addedby , productdate) VALUES ( ? , ? ,? , ?,now())');
-           $stmt->execute(array($productName, $productPrice, $productPath , $addedBy));
+           $stmt = $con->prepare('INSERT INTO products(productname ,productprice,path ,percentage,description,addedby,productdate) VALUES ( ? , ? ,? , ?, ? , ?,now())');
+           $stmt->execute(array($productName, $productPrice, $productPath ,$precentage ,$descreption , $addedBy));
        }
    }else{
        echo  "CSV Only" ;
