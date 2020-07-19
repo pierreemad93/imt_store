@@ -13,13 +13,13 @@
                                 <ul class="nav nav-pills">
                                     <li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex">
                                         <a href="tel:123-456-7890"><i
-                                                class="fab fa-whatsapp text-4 text-color-primary"
-                                                style="top: 0;"></i> 01093985309</a>
+                                                    class="fab fa-whatsapp text-4 text-color-primary"
+                                                    style="top: 0;"></i> 01093985309</a>
                                     </li>
                                     <li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
                                         <a href="mailto:mail@domain.com"><i
-                                                class="far fa-envelope text-4 text-color-primary"
-                                                style="top: 1px;"></i> info@imtstore.com</a>
+                                                    class="far fa-envelope text-4 text-color-primary"
+                                                    style="top: 1px;"></i> info@imtstore.com</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -31,12 +31,20 @@
                                 <ul class="nav nav-pills">
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block">
                                         <a class="nav-link pl-0" href="about-us.html"><i
-                                                class="fas fa-angle-right"></i> About Us</a>
+                                                    class="fas fa-angle-right"></i> About Us</a>
                                     </li>
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block">
                                         <a class="nav-link" href="contact-us.html"><i
-                                                class="fas fa-angle-right"></i> Contact Us</a>
+                                                    class="fas fa-angle-right"></i> Contact Us</a>
                                     </li>
+<!--                                    --><?php //if(isset($_SESSION['Username'])) { ?>
+<!--                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">-->
+<!--                                            <a class="nav-link" href="contact-us.html"><i-->
+<!--                                                        class="fas fa-angle-right"></i> Contact Us</a>-->
+<!--                                        </li>-->
+<!--                                        --><?php
+//                                    }
+//                                    ?>
                                     <!--                                        <li class="nav-item dropdown nav-item-left-border d-none d-sm-block">-->
                                     <!--                                            <a class="nav-link" href="#" role="button" id="dropdownLanguage"-->
                                     <!--                                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
@@ -90,46 +98,46 @@
                                 </div>
                             </li>
                         </ul>
-<!--                        <div class="header-nav-features">-->
-<!--                            <div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2"-->
-<!--                                 data-sticky-header-style="{'minResolution': 991}"-->
-<!--                                 data-sticky-header-style-active="{'top': '78px'}"-->
-<!--                                 data-sticky-header-style-deactive="{'top': '0'}">-->
-<!--                                <a href="#" class="header-nav-features-toggle">-->
-<!--                                    <img src="img/icons/icon-cart-big.svg" height="34" alt=""-->
-<!--                                         class="header-nav-top-icon-img">-->
-<!--                                    <span class="cart-info">-->
-<!--													<span class="cart-qty">1</span>-->
-<!--												</span>-->
-<!--                                </a>-->
-<!--                                <div class="header-nav-features-dropdown" id="headerTopCartDropdown">-->
-<!--                                    <ol class="mini-products-list">-->
-<!--                                        <li class="item">-->
-<!--                                            <a href="#" title="Camera X1000" class="product-image"><img-->
-<!--                                                    src="img/products/product-1.jpg" alt="Camera X1000"></a>-->
-<!--                                            <div class="product-details">-->
-<!--                                                <p class="product-name">-->
-<!--                                                    <a href="#">Camera X1000 </a>-->
-<!--                                                </p>-->
-<!--                                                <p class="qty-price">-->
-<!--                                                    1X <span class="price">$890</span>-->
-<!--                                                </p>-->
-<!--                                                <a href="#" title="Remove This Item" class="btn-remove"><i-->
-<!--                                                        class="fas fa-times"></i></a>-->
-<!--                                            </div>-->
-<!--                                        </li>-->
-<!--                                    </ol>-->
-<!--                                    <div class="totals">-->
-<!--                                        <span class="label">Total:</span>-->
-<!--                                        <span class="price-total"><span class="price">$890</span></span>-->
-<!--                                    </div>-->
-<!--                                    <div class="actions">-->
-<!--                                        <a class="btn btn-dark" href="#">View Cart</a>-->
-<!--                                        <a class="btn btn-primary" href="#">Checkout</a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                        <div class="header-nav-features">-->
+                        <!--                            <div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2"-->
+                        <!--                                 data-sticky-header-style="{'minResolution': 991}"-->
+                        <!--                                 data-sticky-header-style-active="{'top': '78px'}"-->
+                        <!--                                 data-sticky-header-style-deactive="{'top': '0'}">-->
+                        <!--                                <a href="#" class="header-nav-features-toggle">-->
+                        <!--                                    <img src="img/icons/icon-cart-big.svg" height="34" alt=""-->
+                        <!--                                         class="header-nav-top-icon-img">-->
+                        <!--                                    <span class="cart-info">-->
+                        <!--													<span class="cart-qty">1</span>-->
+                        <!--												</span>-->
+                        <!--                                </a>-->
+                        <!--                                <div class="header-nav-features-dropdown" id="headerTopCartDropdown">-->
+                        <!--                                    <ol class="mini-products-list">-->
+                        <!--                                        <li class="item">-->
+                        <!--                                            <a href="#" title="Camera X1000" class="product-image"><img-->
+                        <!--                                                    src="img/products/product-1.jpg" alt="Camera X1000"></a>-->
+                        <!--                                            <div class="product-details">-->
+                        <!--                                                <p class="product-name">-->
+                        <!--                                                    <a href="#">Camera X1000 </a>-->
+                        <!--                                                </p>-->
+                        <!--                                                <p class="qty-price">-->
+                        <!--                                                    1X <span class="price">$890</span>-->
+                        <!--                                                </p>-->
+                        <!--                                                <a href="#" title="Remove This Item" class="btn-remove"><i-->
+                        <!--                                                        class="fas fa-times"></i></a>-->
+                        <!--                                            </div>-->
+                        <!--                                        </li>-->
+                        <!--                                    </ol>-->
+                        <!--                                    <div class="totals">-->
+                        <!--                                        <span class="label">Total:</span>-->
+                        <!--                                        <span class="price-total"><span class="price">$890</span></span>-->
+                        <!--                                    </div>-->
+                        <!--                                    <div class="actions">-->
+                        <!--                                        <a class="btn btn-dark" href="#">View Cart</a>-->
+                        <!--                                        <a class="btn btn-primary" href="#">Checkout</a>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -417,7 +425,8 @@
                                                 </a>
                                             </li>
                                             <li class="dropdown">
-                                                <a class="dropdown-item dropdown-toggle" href="shipping_returns_policy.php">
+                                                <a class="dropdown-item dropdown-toggle"
+                                                   href="shipping_returns_policy.php">
                                                     Shipping & Returns Policy
                                                 </a>
                                             </li>
