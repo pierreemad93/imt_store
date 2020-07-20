@@ -16,8 +16,8 @@
                         </div>
                     </form>
                     <div class="masonry-loader masonry-loader-showing">
-                        <div class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}" id="result">
-                           
+                        <div id="result" class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
+
                         </div>
                     </div>
                 </div>

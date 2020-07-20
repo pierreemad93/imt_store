@@ -7,6 +7,7 @@
         $stmt->execute();
         $rows = $stmt->fetchAll();
         ?>
+
     <?php foreach ($rows as $row) { ?>
         <div class="col-sm-6 col-lg-4 product">
             <?php if (!empty($row['percentage'])) { ?>
