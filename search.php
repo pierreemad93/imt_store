@@ -1,5 +1,4 @@
 <?php session_start(); ?>
-<?php include "admin/connect.php" ?>
 <?php include "include/header.php"; ?>
 <?php include "include/navbar.php"; ?>
     <div role="main" class="main shop py-4">
@@ -17,8 +16,8 @@
                         </div>
                     </form>
                     <div class="masonry-loader masonry-loader-showing">
-                        <div class="row products product-thumb-info-list" data-plugin-masonry
-                             data-plugin-options="{'layoutMode': 'fitRows'}" id="result">
+                        <div class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}" id="result">
+
                         </div>
                     </div>
                 </div>
