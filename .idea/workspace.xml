@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e6913cc9-7951-4262-92b9-5fcd98655b7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,6 +141,26 @@
       <workItem from="1595251522103" duration="1208000" />
       <workItem from="1595253616419" duration="1755000" />
       <workItem from="1595256387677" duration="1658000" />
+      <workItem from="1595258405738" duration="600000" />
+      <workItem from="1595415066494" duration="754000" />
+      <workItem from="1595416975885" duration="1376000" />
+      <workItem from="1595418845663" duration="1799000" />
+      <workItem from="1595420661092" duration="1289000" />
+      <workItem from="1595423037633" duration="599000" />
+      <workItem from="1595425455960" duration="866000" />
+      <workItem from="1595500361109" duration="606000" />
+      <workItem from="1595502181326" duration="1343000" />
+      <workItem from="1595504045152" duration="1229000" />
+      <workItem from="1595508799551" duration="601000" />
+      <workItem from="1595520496372" duration="268000" />
+      <workItem from="1595668793877" duration="1831000" />
+      <workItem from="1595670644985" duration="599000" />
+      <workItem from="1595672469182" duration="599000" />
+      <workItem from="1595681925425" duration="599000" />
+      <workItem from="1595753859119" duration="1572000" />
+      <workItem from="1595755696221" duration="1794000" />
+      <workItem from="1595757506637" duration="1561000" />
+      <workItem from="1595759453776" duration="266000" />
     </task>
     <servers />
   </component>

@@ -20,8 +20,7 @@
 
                             <div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'margin': 10}">
                                 <div>
-                                    <img alt="" height="300" class="img-fluid"
-                                         src="admin/assets/images/products/<?php echo $row['path'] ?>">
+                                    <img alt="" height="300" class="img-fluid" src="admin/assets/images/products/<?php echo $row['path'] ?>">
                                 </div>
                                 <!--                                <div>-->
                                 <!--                                    <img alt="" height="300" class="img-fluid" src="img/products/product-grey-7-2.jpg">-->
