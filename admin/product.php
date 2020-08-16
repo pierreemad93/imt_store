@@ -351,7 +351,7 @@ if ($do == 'manage') {
                                         </div>
                                     </div>
                                 </div>
-                                <input type="submit" value="Add Product" class="btn btn-primary">
+                                <input type="submit" value="Update Product" class="btn btn-primary">
                             </form>
                         </div>
                         <!-- end: Added Form -->
